@@ -86,6 +86,7 @@ header {
 
 .header__title {
 	font-size: 48px;
+	text-align: center;
 	color: #fff;
 }
 
@@ -110,6 +111,24 @@ form {
 	border: none;
 	margin-left: 4px;
 	width: 40px;
+}
+
+.movie-list {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 32px;
+}
+
+.movie {
+	width: calc(100%/3);
+	padding: 8px;
+}
+
+.movie__title {
+	text-align: center;
+	color: #fff;
 }
 
 
