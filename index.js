@@ -2,14 +2,15 @@
 const movieWrapper = document.querySelector('.movie-list');
 
 async function main(){
-	const movies = await fetch("https://www.omdbapi.com/?apikey=f5504bbb&s=horror");
+	const movies = await fetch(`https://www.omdbapi.com/?apikey=f5504bbb&s=see&plot=full`);
 	const moviesData = await movies.json();
 	console.log(moviesData.Search)
 
-	if(document.URL.includes("index.html")) {
-		return movieWrapper.innerHTML = moviesData.Search.slice(0,4).map((movie) => movieHTML(movie)).join("");
-	}
+	movieWrapper.innerHTML = moviesData.Search.slice(0,4).map((movie) => movieHTML(movie)).join("");
+}
 
+function landing__browse(event){
+	localStorage.setItem("keyword", event.target.search.value);
 }
 
 function movieHTML(movie) {
@@ -29,7 +30,8 @@ function movieHTML(movie) {
 }
 
 function navHTML() {
-	
+
 }
+
 
 main();

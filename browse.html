@@ -9,7 +9,7 @@
 	<title>Document</title>
 </head>
 <body>
-	<section id="landing-page">
+	<section id="browse">
 		<nav>
 			<figure>
 				<img src="./assets/chillflix__logo.png" alt="Logo" class="nav__img">
@@ -26,34 +26,30 @@
 						Trending</a>
 				</li>
 				<li>
-					<a href="./browse.html" class="
+					<a href="" class="
 					nav__link 
 					nav__link--main">
 						Browse</a>
 				</li>
 			</ul>
 		</nav>
-		<header class="row">
-			<h1 class="header__title">
-				HIGH QUALITY FLICKS TO<br><span class="text__color">WATCH</span> AND <span class="text__color">CHILL</span> 
-			</h1>
-			<form action="./browse.html" onsubmit="landing__browse(event)">
-				<input class="form__search" type="text" placeholder="Search:" name="search" required>
-				<button class="form__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-			</form>
-			<h2 class="header__feature"><span class="text__color">FEATURED:</span></h2>
-			<div class="movie-list">
-				<div class="movie">
-					<figure class="movie__img--wrapper">
-						<img class="movie__img" src="" alt="">
-					</figure>
-					<div class="movie__title">
-
-					</div>
-				</div>
+		<div class="row">
+			<div class="browse__container">
+				<form action="" onsubmit="browse(event)">
+					<input class="form__search" type="text" placeholder="Search:" name="search" required>
+					<button class="form__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+				</form>
 			</div>
-		</header>
+			<div class="movie-list">
+			</div>
+			<div class="browse__empty">
+				<figure class="browse__img--wrapper">
+					<img src="./assets/browse.svg" alt="" class="browse__img">
+				</figure>
+				<h1 class="browse__text">Search For Movies</h1>
+			</div>
+		</div>
 	</section>
 </body>
-<script src="./index.js"></script>
+<script src="./browse.js"></script>
 </html>
