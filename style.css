@@ -213,11 +213,11 @@ form {
 @media (max-width: 758px) {
 
 	.nav__link {
-		visibility: hidden;
+		display: none;
 	}
 
 	.nav__link--main {
-		visibility: visible;
+		display: block;
 	}
 
 	.header__title {
@@ -237,4 +237,31 @@ form {
 	.movie-list {
 		padding: 0 48px;
 	}
+}
+
+@media (max-width: 480px) {
+
+	.header__title {
+		font-size: 32px;
+	}
+
+	.movie__img--wrapper {
+		width: 150px;
+		height: 250px;
+	}
+
+	.movie-list {
+		padding: 0 40px;
+	}
+
+	.movie__title {
+		font-size: 14px;
+		max-width: 150px;
+		text-align: center;
+	}
+
+	.movie__year {
+		font: 10px;
+	}
+
 }

@@ -1,11 +1,12 @@
 
 const movieWrapper = document.querySelector('.movie-list');
 const searchKey = localStorage.getItem("keyword");
+const type = "series";
 
-async function main(search){
-	const movies = await fetch(`https://www.omdbapi.com/?apikey=f5504bbb&s=${search}&plot=full`);
+async function main(search, type){
+
+	const movies = await fetch(`https://www.omdbapi.com/?apikey=f5504bbb&s=${search}&type=${type}`);
 	const moviesData = await movies.json();
-	// console.log(moviesData.Search)
 
 	if(search === null) {
 		movieWrapper.innerHTML = browseErrorHTML(null);
@@ -19,10 +20,12 @@ async function main(search){
 
 }
 
+
 function browse(event){
 	event.preventDefault();
 	const keyword = event.target.search.value;
-	main(keyword);
+	const type = event.target.type.value;
+	main(keyword, type);
 }
 
 function movieHTML(movie) {
@@ -64,4 +67,4 @@ function browseErrorHTML(error, search){
 	`
 }
 
-main(searchKey);
+main(searchKey, type);

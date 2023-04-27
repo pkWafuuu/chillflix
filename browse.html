@@ -17,18 +17,18 @@
 			<ul class="nav__link--list">
 				<li>
 					<a href="./index.html" class="
-					nav__link">
+						nav__link">
 						Home</a>
 				</li>
 				<li>
 					<a href="" class="
-					nav__link">
+						nav__link">
 						Trending</a>
 				</li>
 				<li>
 					<a href="" class="
-					nav__link 
-					nav__link--main">
+						nav__link 
+						nav__link--main">
 						Browse</a>
 				</li>
 			</ul>
@@ -37,6 +37,10 @@
 			<div class="browse__container">
 				<form action="" onsubmit="browse(event)">
 					<input class="form__search" type="text" placeholder="Search:" name="search" required>
+					<select name="type" class="form__type">
+						<option value="series" >Series</option>
+						<option value="movie" >Movie</option>
+					</select>
 					<button class="form__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</form>
 			</div>
