@@ -120,6 +120,15 @@ form {
 	font-size: 20px;
 }
 
+.form__type {
+	outline: none;
+	border-radius: 5px;
+	padding: 12px 24px;
+	margin-left: 4px;
+	border: none;
+	font-size: 14px;
+}
+
 .form__btn {
 	border-radius: 25px;
 	padding: 12px;
